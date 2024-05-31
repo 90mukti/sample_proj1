@@ -1,0 +1,18 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: sample_proj
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      tag: loop
+  template:
+    metadata:
+      labels:
+        tag: loop
+    spec:
+      containers:
+        - name: yup90
+          image: sample_proj1
+          command: ["/bin/bash","-c","while true; do echo vicky heigala; sleep 6; done"]

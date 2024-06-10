@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout your source code from GitHub
-                git 'https://github.com/90mukti/sample_proj1.git'
+                git branch: 'main', url: 'https://github.com/90mukti/sample_proj1.git'
             }
         }
 
